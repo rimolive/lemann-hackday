@@ -20,6 +20,6 @@ class Rede(models.Model):
 
 class Escola(models.Model):
     login = models.CharField(max_length=80)
-    student_id = models.IntegerField(max_length=30)
+    student_id = models.IntegerField()
     turma = models.CharField(max_length=40)
     rede = models.ForeignKey(Rede) 
