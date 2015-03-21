@@ -16,7 +16,7 @@ class Aluno(models.Model):
     total = models.CharField(max_length=80)
 
 class Rede(models.Model):
-    escola = models.CharField(max_length=80)
+    nome = models.CharField(max_length=80)
 
 class Escola(models.Model):
     login = models.CharField(max_length=80)
