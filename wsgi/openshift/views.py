@@ -8,4 +8,4 @@ def home(request):
     return render_to_response('home/home.html')
 
 def dashboard(request):
-    return HttpResponseget_template('dashboard.html').render())
+    return HttpResponse(get_template('dashboard.html').render())
