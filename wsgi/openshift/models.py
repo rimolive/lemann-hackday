@@ -15,11 +15,20 @@ class Aluno(models.Model):
     videos_watched = models.CharField(max_length=80)
     total = models.CharField(max_length=80)
 
+    def __unicode__(self):
+        return self.login
+
 class Rede(models.Model):
     nome = models.CharField(max_length=80)
+
+    def __unicode__(self):
+        return self.nome
 
 class Escola(models.Model):
     login = models.CharField(max_length=80)
     student_id = models.IntegerField()
     turma = models.CharField(max_length=40)
     rede = models.ForeignKey(Rede) 
+
+    def __unicode__(self):
+        return self.login
