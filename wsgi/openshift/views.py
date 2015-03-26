@@ -9,5 +9,5 @@ def home(request):
 
 def dashboard(request):
     t = get_template('dashboard.html')
-    html = t.render()
+    html = t.render(Context())
     return HttpResponse(html)
