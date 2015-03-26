@@ -8,6 +8,9 @@ def home(request):
     return render_to_response('home/home.html')
 
 def dashboard(request):
-    t = get_template('dashboard.html')
-    html = t.render()
+    try:
+        t = get_template('dashboard.html')
+            html = t.render()
+    except:
+        print sys_exec_info()[0]
     return HttpResponse(html)
